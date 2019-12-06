@@ -1,5 +1,7 @@
-[![docbat](./icon/docbat-logo-small.png)](http://www.deftio.com/docbat)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
+[![NPM version](https://img.shields.io/npm/v/bitwrench.svg?style=flat-square)](https://www.npmjs.com/package/docbat)
+
+[![docbat](./icon/docbat-logo-small.png)](http://www.deftio.com/docbat)
 
 docbat is a simple commandline javascript utility which takes a markdown file and converts to an html page.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
 
@@ -9,24 +11,19 @@ docbat provides methods to add formatting to the HTML page such as custom CSS or
 ## Usage 
 (assumes all installation has been completed.  see Installation section)
 
-### Default ==> looks for README.md and converts to index.html
 
 ```bash 
 ./docbat.js -i myfile.md -o myoutput.html
 ```
 
-The actual input files and output can be changed at command line by providing parameters:
-```bash 
-#Installation (server side)  
-./docbat.js
-```
 
 ## Web Converter
-If you've just cloned this repo you can try the web convertor tool here: [mado2htm web](./docbat-web.html).  It should run from either a served (e.g. http/https) or (file://) based URL.
+If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run from either a served (e.g. http/https) or (file://) based URL.
+If you want to try it online use the version here: [docbat-web](https://docbat-web.html)
 
-## Dependancies
 
-mado2htm uses the nodejs javscript runtime along with some packages which are available via the npmjs javascript packaging service.
+## Dependancies (only important if building from source)
+docbat uses the nodejs javscript runtime along with some packages which are available via the npmjs javascript packaging service.
 
 Technologies:
 * nodejs javascript runtime -  [nodejs](https://nodejs.org/en/)  
@@ -35,19 +32,18 @@ Technologies:
 Key Packages:
 * uses showdown.js for markdown parsing - [showdown.js](https://www.npmjs.com/package/showdown)
 * uses bitwrench.js for page formatting duties - [bitwrench](https://www.npmjs.com/package/bitwrench)
-* uses command-line-args for argument processing
-
-
-
- 
+* uses command-line-args for argument processing - [command-line-args.js](https://www.npmjs.com/package/command-line-args)
+  
+  
+   
 
 ## Source code home  
 all source is at github:  
-[mado2htm on github](http://github.com/deftio/mado2htm)  
+[docbat  on github](http://github.com/deftio/docbat )  
 
 
 ## Linting 
-mado2htm uses eslint for static code checking and analysis.
+docbat  uses eslint for static code checking and analysis.
 
 ```bash
 npm install eslint --save-dev
@@ -64,7 +60,7 @@ Now run the lint test like this:
 * 0.9x Initial release  
   
 ## License  
-mado2htm is released under the OSI Approved FreeBSD 2-clause license  
+docbat  is released under the OSI Approved FreeBSD 2-clause license  
 
 Copyright (c) 2011-19, M. A. Chatterjee <deftio at deftio dot com>  
 All rights reserved.  
