@@ -19,7 +19,8 @@ docbat provides methods to add formatting to the HTML page such as custom CSS or
 
 ## Web Converter
 If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run from either a served (e.g. http/https) or (file://) based URL.
-If you want to try it online use the version here: [docbat-web](https://docbat-web.html)
+   
+If you want to try it online use the version here: [docbat-web](https://deftio.com/docbat/docbat-web.html)
 
 
 ## Dependancies (only important if building from source)
