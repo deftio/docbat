@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<p><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/License-BSD%202--Clause-blue.svg" alt="License" /></a></p>
+<p><a href="http://www.deftio.com/readme2html"><img src="./images/readme2html.png" alt="readme2html" /></a></p>
+<h2 id="readme2html">Readme2HTML</h2>
+<p>Readme2HTML is a simple commandline javascript utility which takes a README.md markdown page and converts to an index.html page.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).</p>
+<h2 id="usage">Usage</h2>
+<p>(assumes all installation has been completed.  see Installation section)</p>
+<h3 id="defaultlooksforreadmemdandconvertstoindexhtml">Default ==&gt; looks for README.md and converts to index.html</h3>
+<p>```bash </p>
+<h1 id="installationserverside">Installation (server side)</h1>
+<p>./readme2html.js</p>
+<pre><code>The actual input files and output can be changed at command line by providing parameters:
+</code></pre>
+<p>bash </p>
+<h1 id="installationserverside-1">Installation (server side)</h1>
+<p>./readme2html.js</p>
+<pre><code>## Dependancies
+
+readm2html uses the nodejs javscript runtime along with some package which are available via the npmjs javascript packaging service.
+
+* nodejs javascript runtime -  [nodejs](https://nodejs.org/en/)  
+* npm - package manager javascript packages - [npm](https://docs.npmjs.com/cli/install)
+* uses showdown.js for markdown parsing - [showdown.js](https://www.npmjs.com/package/showdown)
+* uses bitwrench.js for page formatting duties - [bitwrench](https://www.npmjs.com/package/bitwrench)
+
+
+
+
+## Source code home  
+all source is at github:  
+[readme2html on github](http://github.com/deftio/readme2html)  
+
+
+## Linting 
+readm2html uses eslint for static code checking and analysis.
+</code></pre>
+<p>bash
+npm install eslint --save-dev</p>
+<p>./node_modules/.bin/eslint --init</p>
+<pre><code>Now run the lint test like this:
+</code></pre>
+<p>bash
+./node_modules/.bin/eslint readme2html.js<br />
+```</p>
+<h2 id="releasehistory">Release History</h2>
+<ul>
+<li>0.9x Initial release  </li>
+</ul>
+<h2 id="license">License</h2>
+<p>readme2html is released under the OSI Approved FreeBSD 2-clause license  </p>
+<p>Copyright (c) 2011-19, M. A. Chatterjee <deftio at deftio dot com><br />
+All rights reserved.  </p>
+<p>Redistribution and use in source and binary forms, with or without<br />
+modification, are permitted provided that the following conditions are met:  </p>
+<ul>
+<li><p>Redistributions of source code must retain the above copyright notice, this<br />
+list of conditions and the following disclaimer.  </p></li>
+<li><p>Redistributions in binary form must reproduce the above copyright notice,<br />
+this list of conditions and the following disclaimer in the documentation<br />
+and/or other materials provided with the distribution.  </p></li>
+</ul>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"<br />
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE<br />
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE<br />
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE<br />
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL<br />
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR<br />
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER<br />
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,<br />
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<br />
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  </p>
+</body>
+</html>

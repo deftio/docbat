@@ -1,0 +1,19 @@
+{
+  "name": "docbat",
+  "version": "0.9.0",
+  "description": "docbat is a commandline program that for converting markdown (and some other formats) to 'nice' webpages with overidable costomization",
+  "main": "docbat.js",
+  "dependencies": {
+    "bitwrench": "^1.2.1",
+    "command-line-args": "^5.1.1",
+    "showdown": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "manu chatterjee <deftio@deftio.com> (http://deftio.com)",
+  "license": "ISC"
+}
