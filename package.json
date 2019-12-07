@@ -3,6 +3,10 @@
   "version": "0.9.0",
   "description": "docbat is a commandline program that for converting markdown (and some other formats) to 'nice' webpages with overidable costomization",
   "main": "docbat.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deftio/docbat.git"
+  },
   "dependencies": {
     "bitwrench": "^1.2.1",
     "command-line-args": "^5.1.1",

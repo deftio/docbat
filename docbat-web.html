@@ -6,7 +6,7 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <script src="./node_modules/bitwrench/bitwrench.min.js"></script>
 <script src="./node_modules/showdown/bin/showdown.js"></script>
-<title>DOCBAT WebConvertor</title>
+<title>DOCBAT WebConverter</title>
 <style>
 .a1 { width: 10%; }
 </style>
@@ -15,7 +15,7 @@
 <body class="bw-def-page-setup bw-font-sans-serif">
     <div  class="bw-container">
     <div class="bw-col-12">
-        <a href="https://deftio.com/mado2htm" target="_blank">
+        <a href="https://deftio.com/docbat " target="_blank">
             <div class="bw-col-8;" style="padding: 10px; height:100px;"> 
                 <div style="background-image:url('./icon/docbat-logo.png');  background-repeat: no-repeat; width: 100%; height:100%;  background-size: contain; background-position: center center: "></div>
             </div>
@@ -25,13 +25,13 @@
     <br>
     <div class="a1">Select Input File</div><input type="file" name="inputFile" ></input><br><br>
     <div class="a1">Output Filename</div><textarea rows="1" placeholder="enter a filename" id="ofname"></textarea>
-    <br>
-    <button onclick="convert">Submit</button>
+    <br><br>
+    <button onclick="convert">Convert Now!</button>
     <br>
     <br>
     <div id="messageArea"></div>
     <br><br><br><br><br><br><br><br>
-    <div class="bw-center" style="font-size: 9pt">spannit.js&nbsp;&nbsp;&copy&nbsp;2012-<span id="cdate"></span>&nbsp; M A Chatterjee</div><br> 
+    <div class="bw-center" style="font-size: 9pt">docbat.js&nbsp;&nbsp;&copy&nbsp;2012-<span id="cdate"></span>&nbsp; M A Chatterjee</div><br> 
 </div>
 </div>
 <script>
@@ -60,7 +60,7 @@ _f.drawTextBox = function (domid, title, callback, options) {
         ].map(function(x){return _htm(x)}).join("<br>"));
 }
 */
-    bw.DOM("#versionArea")[0].innerHTML = "<strong>mado2htm.js version:</strong> " + mado2htm.version()["version"];
+    bw.DOM("#versionArea")[0].innerHTML = "<strong>docbat .js version:</strong> " + docbat .version()["version"];
     bw.DOM("#cdate")[0].innerHTML = (new Date()).getFullYear();
 </script>
 
