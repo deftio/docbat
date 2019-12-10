@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
-[![NPM version](https://img.shields.io/npm/v/bitwrench.svg?style=flat-square)](https://www.npmjs.com/package/docbat)
+[![NPM version](https://img.shields.io/npm/v/docbat.svg?style=flat-square)](https://www.npmjs.com/package/docbat)
 
 [![docbat](./icon/docbat-logo-small.png)](http://www.deftio.com/docbat)
 
@@ -19,7 +19,7 @@ docbat provides methods to add formatting to the HTML page such as custom CSS or
 
 ## Web Converter
 If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run from either a served (e.g. http/https) or (file://) based URL.
-   
+
 If you want to try it online use the version here: [docbat-web](https://deftio.com/docbat/docbat-web.html)
 
 

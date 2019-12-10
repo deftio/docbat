@@ -23,7 +23,7 @@
     <br>
     <h2>Markdown-to-HTML simple webconverter</h2>
     <br>
-    <div class="a1">Select Input File</div><input type="file" name="inputFile" ></input><br><br>
+    <div class="a1">Select Input File</div><input type="file" name="inputFile" onchange="handleFiles(this.files)></input><br><br>
     <div class="a1">Output Filename</div><textarea rows="1" placeholder="enter a filename" id="ofname"></textarea>
     <br><br>
     <button onclick="convert">Convert Now!</button>
@@ -36,7 +36,9 @@
 </div>
 <script>
 
+handleFiles=function(f){
 
+}
 convert = function() {
     //check output file name valid first
     //get file
