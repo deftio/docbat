@@ -23,8 +23,8 @@
     <br>
     <h2>Markdown-to-HTML simple webconverter</h2>
     <br>
-    <div class="a1">Select Input File</div><input type="file" name="inputFile" onchange="handleFiles(this.files)></input><br><br>
-    <div class="a1">Output Filename</div><textarea rows="1" placeholder="enter a filename" id="ofname"></textarea>
+    <div class="a1">Select Input File</div><input type="file" name="inputFile" onchange="handleFiles(this.files)""></input><br><br>
+    <div class="a1">Create Output Filename</div><textarea rows="1" placeholder="enter a filename" id="ofname"></textarea>
     <br><br>
     <button onclick="convert">Convert Now!</button>
     <br>
@@ -36,8 +36,15 @@
 </div>
 <script>
 
-handleFiles=function(f){
-
+handleFiles=function(files){
+    var f = files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        var text = reader.result;
+        
+        //docbat save ... 
+    }
+    reader.readAsText(f);
 }
 convert = function() {
     //check output file name valid first
@@ -45,23 +52,7 @@ convert = function() {
 
     //check
 }
-/*
-_f.drawTextBox = function (domid, title, callback, options) {
-    var f = bw.typeOf(callback) == "function" ? bw.funcGetDispatchStr(bw.funcRegister(callback),"this.value") : function(d){}; //need a valid callback
-    title = bw.typeOf(title) == "string" ? ["h3",{},title] : "";
-    var dopts = {
-        rows: 1,
-        placeholder: ""
-    }
-    dopts = _f.optsCopy(dopts,options);
-    
-    _f.el(domid,
-        [
-            title,
-            ["textarea",{rows:dopts.rows, style: "width:100%; padding:1.5%", onkeyup: f, placeholder:dopts.placeholder},""] 
-        ].map(function(x){return _htm(x)}).join("<br>"));
-}
-*/
+
     bw.DOM("#versionArea")[0].innerHTML = "<strong>docbat .js version:</strong> " + docbat .version()["version"];
     bw.DOM("#cdate")[0].innerHTML = (new Date()).getFullYear();
 </script>
