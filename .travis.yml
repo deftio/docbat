@@ -1,0 +1,17 @@
+#travis ci contininous integration check
+language: node_js
+node_js:
+#- "9"
+deploy:
+  provider: script
+  script: "npm publish"
+  skip_cleanup: true
+  on:
+    tags: true
+
+notifications:
+  email:
+    recipients:
+    - deftio@deftio.com
+    on_success: change
+    on_failure: always
