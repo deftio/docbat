@@ -1,22 +1,33 @@
 {
   "name": "docbat",
   "version": "0.9.0",
-  "description": "docbat is a commandline program that for converting markdown (and some other formats) to 'nice' webpages with overidable costomization",
-  "main": "docbat.js",
+  "description": "docbat is a commandline program that for converting markdown (and some other formats) to 'nice' webpages with costomization",
+  "main": "dist/docbat.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/deftio/docbat.git"
   },
   "dependencies": {
-    "bitwrench": "^1.2.1",
+    "bitwrench": "^1.2.3",
     "command-line-args": "^5.1.1",
     "showdown": "^1.9.1"
   },
   "devDependencies": {
-    "eslint": "^6.7.2"
+    "@rollup/plugin-auto-install": "^2.0.0",
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.8.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "del-cli dist -f",
+    "build": "webpack",
+    "rollb": "rollup docbat-lib.js --file docbat2.js --format umd --name \"docbat\"",
+    "dbcli": "./src/docbat-cli.js -i README.md -o index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ujs": "uglifyjs --compress --mangle --output ./dist/docbat.js -- ./src/docbat-lib.js ./node_modules/bitwrench/bitwrench.min.js ./node_modules/showdown/dist/showdown.min.js"
   },
   "author": "manu chatterjee <deftio@deftio.com> (http://deftio.com)",
   "license": "ISC"

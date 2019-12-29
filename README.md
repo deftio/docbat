@@ -3,24 +3,46 @@
 
 [![docbat](./icon/docbat-logo-small.png)](http://www.deftio.com/docbat)
 
-docbat is a simple commandline javascript utility which takes a markdown file and converts to an html page.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
+Docbat is a simple commandline javascript utility which takes coverts several file types html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
 
-docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn't just raw.  Default options add some simple margins and padding for reasonable view across desktop and mobile device contexts.
+Docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn't just raw.  Docbat's default options provide simple margins and padding for reasonable view across desktop and mobile device contexts.
+
+Supported input file types:
+* Markdown
+* raw text
+* JSON objects
+* proper YAML files
+* tab delimited text (also see examples for adding titles)
+* images (no processing is performed on the images)
+
+Supported output:
+* HTML page (with default headers / titles which are overridable)
+* HTML raw (just HTML which can then be chained / piped together)
+* HTML-JSON - as a JSON construct (this leverages the bitwrench.js library, see that library for more details on npm or github)
+
+Docbat exposes the following file distribution libraries:
+* docbat.js     - ES5 / browser library for doing all operations.  
+* docbat.mjs    - ES6 module (uses export/import otherwise same as docbat.js)
+* docbat-cli.js - commandline program for scriptting operations
 
 
-## Usage 
-(assumes all installation has been completed.  see Installation section)
+## Usage at Commandline
 
-
+simple usage
 ```bash 
-./docbat.js -i myfile.md -o myoutput.html
+./docbat-cli.js -i myfile.md -o myoutput.html
 ```
 
+type docbat --help for more commandline options
+
+## Usage as a library
 
 ## Web Converter
-If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run from either a served (e.g. http/https) or (file://) based URL.
+If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run correctly from either a served (e.g. http/https) or (file://) based URL.  The web converter just uses the docbat.js library as script tag.
 
-If you want to try it online use the version here: [docbat-web](https://deftio.com/docbat/docbat-web.html)
+A hosted version is also available here: [docbat-web](https://deftio.com/docbat/docbat-web.html).  
+No information is stored in the server and all conversions are done in the webpage / webbrowser.
+
 
 
 ## Dependancies (only important if building from source)
@@ -31,11 +53,17 @@ Technologies:
 * npm - package manager javascript packages - [npm](https://docs.npmjs.com/cli/install)
 
 Key Packages:
-* uses showdown.js for markdown parsing - [showdown.js](https://www.npmjs.com/package/showdown)
-* uses bitwrench.js for page formatting duties - [bitwrench](https://www.npmjs.com/package/bitwrench)
-* uses command-line-args for argument processing - [command-line-args.js](https://www.npmjs.com/package/command-line-args)
+* showdown.js for markdown parsing - [showdown.js](https://www.npmjs.com/package/showdown)
+* bitwrench.js for page formatting duties - [bitwrench](https://www.npmjs.com/package/bitwrench)
+* command-line-args for argument processing - [command-line-args.js](https://www.npmjs.com/package/command-line-args)
   
-  
+For buildings from Source:
+* webpack and webpackcli
+* del-cli
+
+For Testing:
+* 
+
    
 
 ## Source code home  

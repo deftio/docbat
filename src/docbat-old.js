@@ -1,7 +1,7 @@
 #!/bin/sh
 ':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
-//The above shenbang allows running on systems whether nodejs exec is called 'node'
+//The above shebang allows running on systems whether nodejs exec is called 'node'
 //or called 'nodejs' which is common on many debian systems such as Ubuntu.
 
 //more traditional shebang would be:
@@ -13,7 +13,8 @@
 var version   = "0.9.0";
 var showdown  = require('showdown');         		// markdown parser & converter
 var bw 		  = require('bitwrench');  				// html page scripting engine
-var commandLineArgs = require('command-line-args'); // command line args parser
+var commandLineArgs = require('command-line-args'); // command line args parse*/
+
 var mdconverter = new showdown.Converter();
 
 

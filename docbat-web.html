@@ -5,13 +5,12 @@
 <meta keywords="markdown html convertor deftio" />
 <link rel="icon" type="image/x-icon" href="./favicon.ico" />
 <script src="./node_modules/bitwrench/bitwrench.min.js"></script>
-<script src="./node_modules/showdown/bin/showdown.js"></script>
+<script src="./dist/docbat.js" type="module" ></script>
 <title>DOCBAT WebConverter</title>
 <style>
 .a1 { width: 10%; }
 </style>
 </head>
-
 <body class="bw-def-page-setup bw-font-sans-serif">
     <div  class="bw-container">
     <div class="bw-col-12">
@@ -46,14 +45,8 @@ handleFiles=function(files){
     }
     reader.readAsText(f);
 }
-convert = function() {
-    //check output file name valid first
-    //get file
 
-    //check
-}
-
-    bw.DOM("#versionArea")[0].innerHTML = "<strong>docbat .js version:</strong> " + docbat .version()["version"];
+    bw.DOM("#versionArea")[0].innerHTML = "<strong>docbat .js version:</strong> " + docbat.version()["version"];
     bw.DOM("#cdate")[0].innerHTML = (new Date()).getFullYear();
 </script>
 
