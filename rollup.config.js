@@ -1,4 +1,7 @@
-/*import auto from '@rollup/plugin-auto-install';
+//docbat rollup.config.js 
+
+/*
+import auto from '@rollup/plugin-auto-install';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
