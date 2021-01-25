@@ -73,55 +73,73 @@ Any manual edits may be lost.
 </style></head><body class="bw-def-page-setup bw-font-sans-serif dbat"><br><br><p><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/License-BSD%202--Clause-blue.svg" alt="License" /></a>
 <a href="https://www.npmjs.com/package/docbat"><img src="https://img.shields.io/npm/v/docbat.svg?style=flat-square" alt="NPM version" /></a></p>
 <p><a href="http://www.deftio.com/docbat"><img src="./icon/docbat-logo-small.png" alt="docbat" /></a></p>
-<p>docbat is a simple commandline javascript utility which takes a markdown file and converts to an html page.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).</p>
-<p>docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn't just raw.  Default options add some simple margins and padding for reasonable view across desktop and mobile device contexts.</p>
+<p>Docbat is a simple commandline javascript utility which takes coverts several file types html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).</p>
+<p>Docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn't just raw.  Docbat's default options provide simple margins and padding for reasonable view across desktop and mobile device contexts.</p>
+<p>Supported input file types:</p>
+<ul>
+<li>Markdown</li>
+<li>raw text</li>
+<li>JSON objects</li>
+<li>proper YAML files</li>
+<li>tab delimited text (also see examples for adding titles)</li>
+<li>images (no processing is performed on the images)</li>
+</ul>
+<p>Supported output:</p>
+<ul>
+<li>HTML page (with default headers / titles which are overridable)</li>
+<li>HTML raw (just HTML which can then be chained / piped together)</li>
+<li>HTML-JSON - as a JSON construct (this leverages the bitwrench.js library, see that library for more details on npm or github)</li>
+</ul>
+<p>Docbat exposes the following file distribution libraries:</p>
+<ul>
+<li>docbat.js     - ES5 / browser library for doing all operations.  </li>
+<li>docbat.mjs    - ES6 module (uses export/import otherwise same as docbat.js)</li>
+<li>docbat-cli.js - commandline program for scriptting operations</li>
+</ul>
 <h2 id="usageatcommandline">Usage at Commandline</h2>
-<p>```bash 
-./docbat-cli.js -i myfile.md -o myoutput.html</p>
-<pre><code>## Usage as a library
-
-## Web Converter
-If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run correctly from either a served (e.g. http/https) or (file://) based URL.  The web converter just uses the docbat.js library as script tag.
-
-A hosted version is also available here: [docbat-web](https://deftio.com/docbat/docbat-web.html).  
-No information is stored in the server and all conversions are done in the webpage / webbrowser.
-
-
-
-## Dependancies (only important if building from source)
-docbat uses the nodejs javscript runtime along with some packages which are available via the npmjs javascript packaging service.
-
-Technologies:
-* nodejs javascript runtime -  [nodejs](https://nodejs.org/en/)  
-* npm - package manager javascript packages - [npm](https://docs.npmjs.com/cli/install)
-
-Key Packages:
-* showdown.js for markdown parsing - [showdown.js](https://www.npmjs.com/package/showdown)
-* bitwrench.js for page formatting duties - [bitwrench](https://www.npmjs.com/package/bitwrench)
-* command-line-args for argument processing - [command-line-args.js](https://www.npmjs.com/package/command-line-args)
-
-For buildings from Source:
-* webpack and webpackcli
-* del-cli
-
-
-
-## Source code home  
-all source is at github:  
-[docbat  on github](http://github.com/deftio/docbat )  
-
-
-## Linting 
-docbat  uses eslint for static code checking and analysis.
+<p>simple usage</p>
+<pre><code>./docbat-cli.js -i myfile.md -o myoutput.html
 </code></pre>
-<p>bash
-npm install eslint --save-dev</p>
-<p>./node_modules/.bin/eslint --init</p>
-<pre><code>Now run the lint test like this:
+<p>type docbat --help for more commandline options</p>
+<h2 id="webconverter">Web Converter</h2>
+<p>If you've just cloned this repo you can try the web converter tool here: <a href="./docbat-web.html">docbat</a>.  It should run correctly from either a served (e.g. http/https) or (file://) based URL.  The web converter just uses the docbat.js library as script tag.</p>
+<p>A hosted version is also available here: <a href="https://deftio.com/docbat/docbat-web.html">docbat-web</a>.<br />
+No information is stored in the server and all conversions are done in the webpage / webbrowser.</p>
+<h2 id="usageasalibrary">Usage as a library</h2>
+<h2 id="dependanciesonlyimportantifbuildingfromsource">Dependancies (only important if building from source)</h2>
+<p>docbat uses the nodejs javscript runtime along with some packages which are available via the npmjs javascript packaging service.</p>
+<p>Technologies:</p>
+<ul>
+<li>nodejs javascript runtime -  <a href="https://nodejs.org/en/">nodejs</a>  </li>
+<li>npm - package manager javascript packages - <a href="https://docs.npmjs.com/cli/install">npm</a></li>
+</ul>
+<p>Key Packages:</p>
+<ul>
+<li>showdown.js for markdown parsing - <a href="https://www.npmjs.com/package/showdown">showdown.js</a></li>
+<li>bitwrench.js for page formatting duties - <a href="https://www.npmjs.com/package/bitwrench">bitwrench</a></li>
+<li>command-line-args for argument processing - <a href="https://www.npmjs.com/package/command-line-args">command-line-args.js</a></li>
+</ul>
+<p>For buildings from Source:</p>
+<ul>
+<li>webpack and webpackcli</li>
+<li>del-cli</li>
+</ul>
+<p>For Testing:</p>
+<ul>
+* 
+</ul>
+<h2 id="sourcecodehome">Source code home</h2>
+<p>all source is at github:<br />
+<a href="http://github.com/deftio/docbat">docbat  on github</a>  </p>
+<h2 id="linting">Linting</h2>
+<p>docbat  uses eslint for static code checking and analysis.</p>
+<pre><code class="bash language-bash">npm install eslint --save-dev
+
+./node_modules/.bin/eslint --init
 </code></pre>
-<p>bash
-./node_modules/.bin/eslint docbat.js<br />
-```</p>
+<p>Now run the lint test like this:</p>
+<pre><code class="bash language-bash">./node_modules/.bin/eslint docbat.js   
+</code></pre>
 <h2 id="releasehistory">Release History</h2>
 <ul>
 <li>0.9x Initial release  </li>

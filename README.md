@@ -29,13 +29,13 @@ Docbat exposes the following file distribution libraries:
 ## Usage at Commandline
 
 simple usage
-```bash 
+``` 
 ./docbat-cli.js -i myfile.md -o myoutput.html
+
 ```
 
 type docbat --help for more commandline options
 
-## Usage as a library
 
 ## Web Converter
 If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run correctly from either a served (e.g. http/https) or (file://) based URL.  The web converter just uses the docbat.js library as script tag.
@@ -43,6 +43,7 @@ If you've just cloned this repo you can try the web converter tool here: [docbat
 A hosted version is also available here: [docbat-web](https://deftio.com/docbat/docbat-web.html).  
 No information is stored in the server and all conversions are done in the webpage / webbrowser.
 
+## Usage as a library
 
 
 ## Dependancies (only important if building from source)

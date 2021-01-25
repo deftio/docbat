@@ -68,26 +68,26 @@ try {
 		 		//begin minor formatting stuff using bitwrench to add proper header, footer etc
 		 		//bitwrench can use JSON to create HTML page content
 		 		var pageContent = 
-		 			[
-		 				"html", "",
-			 				[
-						 		["head","", 
-						 			[
+		 			{
+		 				t:"html",
+			 				c:[
+						 		{t:"head" ,
+						 			c:[
 						 				options.metacontent,
 						 				options.favicon,
 						 				options.autogen_cmt,
 						    			["style","",bw.CSSSimpleStyles()],
 						    			["style","",bw.makeCSS([[".dbat",{"padding-left":options.bodyPaddingHoriz,"padding-right":options.bodyPaddingHoriz}]])]
 						  			]
-						 		],
-						 		["body",{"class":"bw-def-page-setup bw-font-sans-serif dbat"},
-						 			[
+								},
+						 		{t:"body",a:{"class":"bw-def-page-setup bw-font-sans-serif dbat"},
+						 			c:[
 						 				"<br><br>",
 						 				readmehtml
 									]
-						  		]
+								}
 						 	]
-					];
+						};
 
 				//now convert to final html format
 		 		html = bw.html(pageContent);
