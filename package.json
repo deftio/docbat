@@ -30,9 +30,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ujs": "uglifyjs --compress --mangle --output ./dist/docbat.js -- ./src/docbat-lib.js ./node_modules/bitwrench/bitwrench.min.js ./node_modules/showdown/dist/showdown.min.js"
   },
-  "bin" : {
-    "./src/docbat-old.js"
-  },
+  "bin" :  "./src/docbat-old.js",
   "author": "manu chatterjee <deftio@deftio.com> (http://deftio.com)",
   "license": "ISC"
 }
