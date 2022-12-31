@@ -32,7 +32,7 @@
   },
   "bin" : {
     "./src/docbat-old.js"
-  }
+  },
   "author": "manu chatterjee <deftio@deftio.com> (http://deftio.com)",
   "license": "ISC"
 }
