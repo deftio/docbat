@@ -19,8 +19,8 @@
     "del-cli": "^3.0.1",
     "eslint": "^6.8.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "prebuild": "del-cli dist -f",
@@ -30,6 +30,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ujs": "uglifyjs --compress --mangle --output ./dist/docbat.js -- ./src/docbat-lib.js ./node_modules/bitwrench/bitwrench.min.js ./node_modules/showdown/dist/showdown.min.js"
   },
+  "bin" : {
+    "./src/docbat-old.js"
+  }
   "author": "manu chatterjee <deftio@deftio.com> (http://deftio.com)",
   "license": "ISC"
 }
