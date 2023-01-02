@@ -3,7 +3,7 @@
 
 [![docbat](./icon/docbat-logo-small.png)](http://www.deftio.com/docbat)
 
-Docbat is a simple commandline javascript utility which takes coverts several file types html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
+Docbat is a simple commandline javascript utility which takes coverts several file types to html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
 
 Docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn't just raw.  Docbat's default options provide simple margins and padding for reasonable view across desktop and mobile device contexts.
 
@@ -19,6 +19,7 @@ Supported output:
 * HTML page (with default headers / titles which are overridable)
 * HTML raw (just HTML which can then be chained / piped together)
 * HTML-JSON - as a JSON construct (this leverages the bitwrench.js library, see that library for more details on npm or github)
+* proper formatting, including syntax highlighting for code blocks (via higlight.js)
 
 Docbat exposes the following file distribution libraries:
 * docbat.js     - ES5 / browser library for doing all operations.  
@@ -29,12 +30,40 @@ Docbat exposes the following file distribution libraries:
 ## Usage at Commandline
 
 simple usage
-``` 
+
+```bash 
 ./docbat-cli.js -i myfile.md -o myoutput.html
+
+type docbat --help for more commandline options
+```
+
+### Code Syntax Support
+
+Code syntax highlighting is supported.  Here is a Javascript example:
+
+```javascript
+let addTwoNumbers = function(a,b) { return a+ b}
+
+const myObject = {
+   "one": "this is it,
+   2: [1,2,3,4,5],
+   3: { "an embedded object": "I am a js object!", 8 : "eight"}
+}
 
 ```
 
-type docbat --help for more commandline options
+and here is python
+
+```python
+"""
+Simple python code example
+"""
+#import myLibrary
+def addTwoNumbers(a,b)
+  return a+b
+
+```
+
 
 
 ## Web Converter
@@ -46,7 +75,7 @@ No information is stored in the server and all conversions are done in the webpa
 ## Usage as a library
 
 
-## Dependancies (only important if building from source)
+## Dependencies (only important if building from source)
 docbat uses the nodejs javscript runtime along with some packages which are available via the npmjs javascript packaging service.
 
 Technologies:
