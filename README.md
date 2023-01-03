@@ -1,17 +1,26 @@
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
+
 [![NPM version](https://img.shields.io/npm/v/docbat.svg?style=flat-square)](https://www.npmjs.com/package/docbat)
 
 [![docbat](./icon/docbat-logo-small.png)](http://www.deftio.com/docbat)
 
-Docbat is a simple commandline javascript utility which takes coverts several file types to html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
+Docbat is a simple javascript utility which takes coverts several file types to html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don't have a markdown viewer installed (say as a browser extension).
 
 Docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn't just raw.  Docbat's default options provide simple margins and padding for reasonable view across desktop and mobile device contexts.
+
+## Simple Usage:
+```bash
+npx docbat -i inputfile.md -o outputfile.html 
+```
+if the -l parameter is included all libraries will be embedded in the page as a single stand alone file with support for code syntax higlighting.
+
+```bash
+npx docbat -i inputfile.md -o outputfile.html -l
+```
 
 Supported input file types:
 * Markdown
 * raw text
-* JSON objects
-* proper YAML files
 * tab delimited text (also see examples for adding titles)
 * images (no processing is performed on the images)
 
@@ -21,6 +30,7 @@ Supported output:
 * HTML-JSON - as a JSON construct (this leverages the bitwrench.js library, see that library for more details on npm or github)
 * proper formatting, including syntax highlighting for code blocks (via higlight.js)
 
+Future: 
 Docbat exposes the following file distribution libraries:
 * docbat.js     - ES5 / browser library for doing all operations.  
 * docbat.mjs    - ES6 module (uses export/import otherwise same as docbat.js)
@@ -64,13 +74,6 @@ def addTwoNumbers(a,b)
 
 ```
 
-
-
-## Web Converter
-If you've just cloned this repo you can try the web converter tool here: [docbat](./docbat-web.html).  It should run correctly from either a served (e.g. http/https) or (file://) based URL.  The web converter just uses the docbat.js library as script tag.
-
-A hosted version is also available here: [docbat-web](https://deftio.com/docbat/docbat-web.html).  
-No information is stored in the server and all conversions are done in the webpage / webbrowser.
 
 ## Usage as a library
 

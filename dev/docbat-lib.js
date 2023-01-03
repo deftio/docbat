@@ -15,8 +15,29 @@
 //var bw 		  	= require('bitwrench');  		// html page scripting engine
 //var fs 			= require('fs');
 
-import * as showdown from "showdown";
+import * as marked from "marked";
 import * as bw from "bitwrench";
+
+
+var embedHJS = function (embed) {
+	let h = "";
+	
+	if (embed) { // puts all of highlight js as embedded code in the page for stand alone
+		const hljs_css="./node_modules/@highlightjs/cdn-assets/styles/default.min.css";
+		const hljs="./node_modules/@highlightjs/cdn-assets/highlight.min.js";
+		let data = fs.readFileSync(hljs_css, {encoding:'utf8', flag:'r'});
+		
+		h+= bw.html({t:"style",c:data})+'\n';
+		data = fs.readFileSync(hljs, {encoding:'utf8', flag:'r'});
+		h+= bw.html({t:"script",c:data})+'\n';
+	}
+	else { // link to cdn for highlightjs support
+		h += '<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css">\n';
+		h += '<script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>\n';
+	}
+	h += '<script>hljs.highlightAll();</script>\n';
+	return h;
+}
 
 var docbat =function() { 
 	var r = {

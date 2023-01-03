@@ -1,6 +1,6 @@
 {
   "name": "docbat",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "docbat is a commandline program that for converting markdown (and some other formats) to 'nice' webpages with costomization",
   "main": "dist/docbat.js",
   "repository": {
@@ -32,7 +32,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ujs": "uglifyjs --compress --mangle --output ./dist/docbat.js -- ./src/docbat-lib.js ./node_modules/bitwrench/bitwrench.min.js ./node_modules/showdown/dist/showdown.min.js"
   },
-  "bin": "./src/docbat-old.js",
+  "bin": "./src/docbat-cli.js",
   "author": "manu chatterjee <deftio@deftio.com> (http://deftio.com)",
   "license": "ISC"
 }

@@ -98,17 +98,21 @@ Any manual edits may be lost.
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 </head>
-<body class="bw-def-page-setup bw-font-sans-serif dbat" ><br><br><p><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/License-BSD%202--Clause-blue.svg" alt="License"></a>
-<a href="https://www.npmjs.com/package/docbat"><img src="https://img.shields.io/npm/v/docbat.svg?style=flat-square" alt="NPM version"></a></p>
+<body class="bw-def-page-setup bw-font-sans-serif dbat" ><br><br><p><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/License-BSD%202--Clause-blue.svg" alt="License"></a></p>
+<p><a href="https://www.npmjs.com/package/docbat"><img src="https://img.shields.io/npm/v/docbat.svg?style=flat-square" alt="NPM version"></a></p>
 <p><a href="http://www.deftio.com/docbat"><img src="./icon/docbat-logo-small.png" alt="docbat"></a></p>
-<p>Docbat is a simple commandline javascript utility which takes coverts several file types to html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don&#39;t have a markdown viewer installed (say as a browser extension).</p>
+<p>Docbat is a simple javascript utility which takes coverts several file types to html pages.  This is useful for build scripts where you want to able to just browse a directory and have see the same content as a README.md but don&#39;t have a markdown viewer installed (say as a browser extension).</p>
 <p>Docbat provides methods to add formatting to the HTML page such as custom CSS or other constructs after the markdown conversion so that the HTML isn&#39;t just raw.  Docbat&#39;s default options provide simple margins and padding for reasonable view across desktop and mobile device contexts.</p>
+<h2 id="simple-usage">Simple Usage:</h2>
+<pre><code class="language-bash">npx docbat -i inputfile.md -o outputfile.html 
+</code></pre>
+<p>if the -l parameter is included all libraries will be embedded in the page as a single stand alone file with support for code syntax higlighting.</p>
+<pre><code class="language-bash">npx docbat -i inputfile.md -o outputfile.html -l
+</code></pre>
 <p>Supported input file types:</p>
 <ul>
 <li>Markdown</li>
 <li>raw text</li>
-<li>JSON objects</li>
-<li>proper YAML files</li>
 <li>tab delimited text (also see examples for adding titles)</li>
 <li>images (no processing is performed on the images)</li>
 </ul>
@@ -119,7 +123,8 @@ Any manual edits may be lost.
 <li>HTML-JSON - as a JSON construct (this leverages the bitwrench.js library, see that library for more details on npm or github)</li>
 <li>proper formatting, including syntax highlighting for code blocks (via higlight.js)</li>
 </ul>
-<p>Docbat exposes the following file distribution libraries:</p>
+<p>Future: 
+Docbat exposes the following file distribution libraries:</p>
 <ul>
 <li>docbat.js     - ES5 / browser library for doing all operations.  </li>
 <li>docbat.mjs    - ES6 module (uses export/import otherwise same as docbat.js)</li>
@@ -149,9 +154,6 @@ Simple python code example
 def addTwoNumbers(a,b)
   return a+b
 </code></pre>
-<h2 id="web-converter">Web Converter</h2>
-<p>If you&#39;ve just cloned this repo you can try the web converter tool here: <a href="./docbat-web.html">docbat</a>.  It should run correctly from either a served (e.g. http/https) or (file://) based URL.  The web converter just uses the docbat.js library as script tag.</p>
-<p>A hosted version is also available here: <a href="https://deftio.com/docbat/docbat-web.html">docbat-web</a>.<br>No information is stored in the server and all conversions are done in the webpage / webbrowser.</p>
 <h2 id="usage-as-a-library">Usage as a library</h2>
 <h2 id="dependencies-only-important-if-building-from-source">Dependencies (only important if building from source)</h2>
 <p>docbat uses the nodejs javscript runtime along with some packages which are available via the npmjs javascript packaging service.</p>
