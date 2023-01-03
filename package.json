@@ -25,7 +25,7 @@
   },
   "scripts": {
     "prebuild": "del-cli dist -f",
-    "build": "./src/docbat-old.js -i README.md -o index.html -s -l",
+    "build": "./src/docbat-cli.js -i README.md -o index.html -s -l",
     "build-wp": "webpack",
     "rollb": "rollup docbat-lib.js --file docbat2.js --format umd --name \"docbat\"",
     "dbcli": "./src/docbat-cli.js -i README.md -o index.html",
