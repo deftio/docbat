@@ -8,7 +8,8 @@
 ** add support bootstrap 
 ** make proper docbat-lib
 ** make proper docbat cli
-
+** add pdf support 
+** add mermaidjs (diagramming) support
 
 
 <done below>

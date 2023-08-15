@@ -1,6 +1,6 @@
 {
   "name": "docbat",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "docbat is a commandline program that for converting markdown (and some other formats) to 'nice' webpages with costomization",
   "main": "dist/docbat.js",
   "repository": {
@@ -12,7 +12,8 @@
     "bitwrench": "^1.2.15",
     "command-line-args": "^5.1.1",
     "highlight.js": "^10.1.2",
-    "marked": "^4.2.5"
+    "marked": "^4.2.5",
+    "puppeteer": "^21.0.3"
   },
   "devDependencies": {
     "@rollup/plugin-auto-install": "^2.0.0",
