@@ -13,7 +13,7 @@
     "command-line-args": "^5.1.1",
     "highlight.js": "^10.1.2",
     "marked": "^4.2.5",
-    "puppeteer": "^21.0.3"
+    "puppeteer": "^22.12.1"
   },
   "devDependencies": {
     "@rollup/plugin-auto-install": "^2.0.0",
